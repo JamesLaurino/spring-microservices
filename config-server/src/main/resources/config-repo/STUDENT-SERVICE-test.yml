@@ -1,0 +1,23 @@
+server:
+  port: 8081
+
+spring:
+  data:
+    mongodb:
+      authentication-database: admin
+      username: james
+      password: 1234
+      database: StudentDatabase
+      port: 27017
+      host: localhost
+      auto-index-creation: true   # Automatically create indexes
+      write-concern: NORMAL
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    hostname: localhost
